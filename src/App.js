@@ -21,6 +21,32 @@ import ImgMan from './css/img/man.jpg';
 // import Navbar from './Components/Navbar';
 
 class App extends Component {
+  constructor(props){
+    super();
+    this.props = props;
+    this.state = {
+      transform: -60,
+      scrolling:false
+
+     };
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+};
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+};
+
+handleScroll(event) {
+  if (window.scrollY === 0 && this.state.scrolling === true) {
+      this.setState({scrolling: false});
+  }
+  else if (window.scrollY !== 0 && this.state.scrolling !== true) {
+      this.setState({scrolling: true});
+  }
+};
   render() {
     var settings = {
       infinite: true,
@@ -32,7 +58,7 @@ class App extends Component {
     };
     return (
 			<div className="App">
-        <nav className="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <nav className={this.state.scrolling ? "navbar nav-scrolled navbar-expand-lg navbar-light fixed-top" :"navbar navbar-expand-lg navbar-light fixed-top"} id="mainNav">
             <div className="container">
                   <a className="navbar-brand js-scroll-trigger" href="#page-top">
                   <h1 className="text-uppercase">
@@ -43,8 +69,12 @@ class App extends Component {
                   </h1>
                   </a>
                   <div className="top_nums">
-                    <p className="text-black mb-4"><a href="tel:+380503921260"> +38 (098) 211 98 58</a></p>
-                    <p className="text-black mb-4"><a href="tel:+380634868240"> +38 (066) 562 11 51</a></p>
+                    <p className="text-black mb-4">
+                      <a href="tel:+380503921260"
+                      className={this.state.scrolling ? "top_nums_swow" : " " }> +38 (098) 211 98 58</a></p>
+                    <p className="text-black mb-4">
+                      <a href="tel:+380634868240"
+                        className={this.state.scrolling ? "top_nums_swow" : " " }> +38 (066) 562 11 51</a></p>
                   </div>
                   <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                   <span className="navbar-toggler-icon"></span>
@@ -54,22 +84,22 @@ class App extends Component {
 
                   <ul className="navbar-nav ml-auto">
                   <li className="nav-item">
-                  <a className="nav-link js-scroll-trigger" href="#okomp">О комплексе</a>
+                  <a className={this.state.scrolling ? "nav-link nav-scrolled-links js-scroll-trigger" : "nav-link js-scroll-trigger" }  href="#okomp">О комплексе</a>
                   </li>
                   <li className="nav-item">
-                  <a className="nav-link js-scroll-trigger" href="#preim">Преимущества</a>
+                  <a className={this.state.scrolling ? "nav-link nav-scrolled-links js-scroll-trigger" : "nav-link js-scroll-trigger" }  href="#preim">Преимущества</a>
                   </li>
                   <li className="nav-item">
-                  <a className="nav-link js-scroll-trigger" href="#price">Цены</a>
+                  <a className={this.state.scrolling ? "nav-link nav-scrolled-links js-scroll-trigger" : "nav-link js-scroll-trigger" }  href="#price">Цены</a>
                   </li>
                   <li className="nav-item">
-                  <a className="nav-link js-scroll-trigger" href="#rassr">Рассрочка</a>
+                  <a className={this.state.scrolling ? "nav-link nav-scrolled-links js-scroll-trigger" : "nav-link js-scroll-trigger" }  href="#rassr">Рассрочка</a>
                   </li>
                   <li className="nav-item">
-                  <a className="nav-link js-scroll-trigger" href="#plan">Планировки</a>
+                  <a className={this.state.scrolling ? "nav-link nav-scrolled-links js-scroll-trigger" : "nav-link js-scroll-trigger" }  href="#plan">Планировки</a>
                   </li>
                   <li className="nav-item">
-                  <a className="nav-link js-scroll-trigger" href="#contact">Контакты</a>
+                  <a className={this.state.scrolling ? "nav-link nav-scrolled-links js-scroll-trigger" : "nav-link js-scroll-trigger" }  href="#contact">Контакты</a>
                   </li>
                   </ul>
 
@@ -83,7 +113,7 @@ class App extends Component {
 <div className="row">
 
 <div className="col-lg-4 mx-auto">
-<h2>
+<h2 onScroll= {(ev)=> this.handleScroll(ev)}>
 
 Наш новый проект на площади Толбухина!
 </h2>

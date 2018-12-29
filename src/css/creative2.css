@@ -1011,12 +1011,12 @@ nav .container {
   transition: .4s 0.7s;
 }
 
-/* .nav-scrolled{
-  background-color: white;
+.nav-scrolled{
+  background-color: white !important;
 }
 .nav-scrolled-links{
-  color: black;
+  color: black !important;
 }
-.top_nums p a {
-  opacity: 1;
-} */
+.top_nums_swow{
+  opacity: 1 !important;
+}
