@@ -14,6 +14,8 @@ import Img20 from './css/img/20.png';
 import Img30 from './css/img/30.png';
 import Img40 from './css/img/40.png';
 import Img50 from './css/img/50.png';
+import ManMap from './css/img/manmap.jpg';
+import ImgMan from './css/img/man.jpg';
 
 
 // import Navbar from './Components/Navbar';
@@ -183,7 +185,7 @@ class App extends Component {
 </div>
 </div>
 <div className="container">
-<div className="row ban">
+<div className="row ban in">
 <div className="col-lg-4 col-md-6 text-center">
 <div className="service-box mt-5 mx-auto">
 <img src="img/sofa1.png" />
@@ -249,6 +251,87 @@ class App extends Component {
 </div>
 </div>
 </section>
+<section id="contact">
+<div className="container">
+<div className="row">
+<div className="col-lg-4 mx-auto text-center rasp">
+<h2 className="section-heading">Расположение</h2>
+<hr className="my-4"/>
+
+<p className="text-black mb-4">Комплекс расположен в сердце динамично развивающегося района на пересечении улиц Академика Филатова и Люстдорфской дороги. Уникальность идеи состоит в эффективном обустройстве эксклюзивного пространства, удачно сочетающего в себе идеальное месторасположение, просторную благоустроенную придомовую территорию и развитую инфраструктуру.</p>
+<a className="btn btn-light btn-xl js-scroll-trigger grad" href="#services">Узнать подробнее!</a>
+</div>
+<div className="col-lg-8 mx-auto text-center ">
+<img src={ManMap} />
+</div>
+</div>
+</div>
+</section>
+<section id="zapis">
+<h2 className="section-heading text-center">Записаться на показ</h2>
+<hr className="my-4"/>
+<div className="flex cform">
+<div className="form-group">
+<input className="form-control" id="name" type="text" placeholder="Ваше имя *" required="" data-validation-required-message="Please enter your name."/>
+<p className="help-block text-danger"></p>
+</div>
+<div className="form-group">
+<input className="form-control" id="phone" type="tel" placeholder="Ваш телефон *" required="" data-validation-required-message="Please enter your phone number."/>
+<p className="helpblock text-danger"></p>
+</div>
+
+
+
+<button id="sendMessageButton" className="btn btn-light js-scroll-trigger grad" type="submit">Отправить</button>
+</div>
+
+</section>
+
+
+
+
+<section id="contact">
+<div className="container">
+<div className="row">
+<div className="col-lg-8 mx-auto text-center ">
+<img src={ImgMan}/>
+</div>
+
+<div className="col-lg-4 mx-auto text-center ">
+<h2 className="section-heading">Контакты</h2>
+<hr className="my-4"/>
+<hr className="light my-4"/>
+<p className="text-black mb-4">Одесса, Академика Филатова, 2</p>
+<p className="text-black mb-4 phs"><a href="tel:+380503921260"> +38 (098) 211 98 58</a></p>
+<p className="text-black mb-4 phs"><a href="tel:+380634868240"> +38 (066) 562 11 51</a></p>
+</div>
+<a className="btn btn-light btn-xl js-scroll-trigger grad" href="#services">Связаться с нами!</a>
+</div>
+
+</div>
+</section>
+<footer className="footer">
+  <div className="container">
+    <div className="row">
+    <div className="kingplace-logo">
+      <img src={Logo} alt=""/>
+
+        </div>
+  <div className="top_nums bot_nums">
+  <div className="bn">
+    <p className="text-black mb-4"><a href="tel:+380503921260"> +38 (098) 211 98 58</a></p>
+    <p className="text-black mb-4"><a href="tel:+380634868240"> +38 (066) 562 11 51</a></p>
+    </div>
+  </div>
+    <p>
+      Жк Манхеттен 2018
+    </p>
+  </div>
+
+
+</div>
+</footer>
+
 </div>
     );
   }
