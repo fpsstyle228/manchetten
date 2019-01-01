@@ -168,7 +168,7 @@ img::-moz-selection {
 }
 
 header.masthead {
-    padding-top: 10rem;
+    padding-top: 0rem;
     padding-bottom: calc(10rem - 56px);
     background-image: url(img/doma.png);
     background-position: center center;
@@ -1019,4 +1019,130 @@ nav .container {
 }
 .top_nums_swow{
   opacity: 1 !important;
+}
+
+@media (min-width: 764px) {
+  .op{
+    padding: 0;
+  }
+}
+@media (min-width: 740px) {
+  .op{
+    padding: 0 !important;
+  }
+}
+@media (min-width: 732px) {
+  .op{
+    padding: 0 !important;
+  }
+}
+/* @media (min-width: 724px) {
+  .op{
+    padding: 0 !important;
+  }
+}
+
+@media (min-width: 688px) {
+  .comparerr {
+    flex-direction: column !important;
+    margin: 0 auto 70px !important;
+  }
+}
+@media (min-width: 644px) {
+  .comparerr {
+    flex-direction: column !important;
+    margin: 0 auto 70px !important;
+  }
+} */
+
+.op{
+  margin-top: 20px;
+}
+@media (max-width: 984px) {
+  .op{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 752px) {
+  .text-faded{
+    margin-bottom: 0 !important;
+  }
+}
+.topNavMain{
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+}
+.topNav{
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1;
+  transition: all 1s;
+}
+.contNav > ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+.contNav > ul > li > a{
+  font-size: .9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+  padding: .5rem 1rem;
+}
+.contNav-mobile{
+  display: none;
+}
+.scrolled-links-black{
+  color: black !important;
+}
+@media (max-width: 924px) {
+  .contNav{
+    display: none;
+  }
+  .contLogo{
+    margin-left: 30px;
+  }
+  .contNav-mobile{
+    display: block;
+    margin-right: 30px;
+  }
+  .topNav{
+    width: 100%;
+    justify-content: space-between;
+  }
+  /* .bars_nav{
+    width: 45px;
+  } */
+  .MuiButtonBase-root-27{
+    border:none !important;
+  }
+  .MuiButtonBase-root-27:focus{
+    border: none;
+  }
+  .MuiMenu-paper-30{
+    margin-top: 70px;
+  }
+  .MuiButtonBase-root-27{
+    font-size: 50px;
+  }
+  button:focus{
+    outline: none;
+  }
+}
+@media (max-width: 920px) {
+  .mobileBannerTop{
+    margin-top: 100px;
+  }
+}
+header{
+  padding-top: 0 !important;
 }
