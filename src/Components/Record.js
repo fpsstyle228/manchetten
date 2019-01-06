@@ -6,7 +6,7 @@ class Record extends Component {
   render() {
     return (
       <section id="zapis">
-        <h2 className="section-heading text-center">Записаться на показ</h2>
+        <h2 className="section-heading text-center">{this.props.data.headline}</h2>
         <hr className="my-4"/>
         <div className="flex cform">
           <div className="form-group">
@@ -18,7 +18,7 @@ class Record extends Component {
             <p className="helpblock text-danger"></p>
           </div>
 
-          <button id="sendMessageButton" className="btn btn-light js-scroll-trigger grad" type="submit">Отправить</button>
+          <button id="sendMessageButton" className="btn btn-light js-scroll-trigger grad" type="submit">{this.props.data.buttonText}</button>
         </div>
 
       </section>

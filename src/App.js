@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './css/creative2.css';
+import {connect} from "react-redux";
 
 import Head from "./Components/Head";
 import About from "./Components/About";
@@ -15,24 +16,27 @@ import Foot from "./Components/Foot";
 class App extends Component {
   constructor() {
     super();
-    
-  }
 
+  };
   render() {
+
     return (<div className="App">
-      <Head/>
-      <About/>
-      <Advantages/>
-      <Price/>
-      <Credit/>
-      <Plan/>
-      <Contact/>
-      <Record/>
-      <SecondContact/>
-      <Foot/>
+      <Head data={this.props.Head} top={this.props.topNav}/>
+      <About data={this.props.About}/>
+      <Advantages data={this.props.Advantages}/>
+      <Price data={this.props.Price}/>
+      <Credit data={this.props.Credit}/>
+      <Plan data={this.props.Plan}/>
+      <Contact data={this.props.Contact}/>
+      <Record data={this.props.Record}/>
+      <SecondContact data={this.props.SecondContact}/>
+      <Foot data={this.props.Foot}/>
 
     </div>);
   }
 }
+const mapStateToProps = (state) => {
+  return state;
+};
 
-export default App;
+export default connect(mapStateToProps)(App);
