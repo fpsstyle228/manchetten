@@ -21,7 +21,7 @@ class App extends Component {
   render() {
 
     return (<div className="App">
-      <Head data={this.props.Head} top={this.props.topNav}/>
+      <Head data={this.props.Header} top={this.props.topNav}/>
       <About data={this.props.About}/>
       <Advantages data={this.props.Advantages}/>
       <Price data={this.props.Price}/>
@@ -36,7 +36,19 @@ class App extends Component {
   }
 }
 const mapStateToProps = (state) => {
-  return state;
-};
+  return {
+      Header: state.Header,
+      topNav: state.TopNav,
+      About: state.About,
+      Advantages: state.Advantages,
+      Price: state.Price,
+      Credit: state.Credit,
+      Plan: state.Plan,
+      Contact: state.Contact,
+      Record: state.Record,
+      SecondContact: state.SecondContact,
+      Foot: state.Foot
 
+  };
+};
 export default connect(mapStateToProps)(App);
