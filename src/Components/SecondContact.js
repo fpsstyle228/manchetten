@@ -14,7 +14,7 @@ class SecondContact extends Component {
         <div className="container">
           <div className="row">
             <div className="col-lg-8 mx-auto text-center ">
-              <img src={this.props.data.img}/>
+              <img src={this.props.data.img} alt="SecondContact" />
             </div>
 
             <div className="col-lg-4 mx-auto text-center ">

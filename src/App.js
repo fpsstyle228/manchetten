@@ -14,10 +14,6 @@ import SecondContact from "./Components/SecondContact";
 import Foot from "./Components/Foot";
 
 class App extends Component {
-  constructor() {
-    super();
-
-  };
   render() {
 
     return (<div className="App">

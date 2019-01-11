@@ -16,7 +16,7 @@ class Contact extends Component {
               <a className="btn btn-light btn-xl js-scroll-trigger grad" href="#services">{this.props.data.textButton}</a>
             </div>
             <div className="col-lg-8 mx-auto text-center ">
-              <img src={this.props.data.img}/>
+              <img src={this.props.data.img} alt= 'Contact'/>
             </div>
           </div>
         </div>

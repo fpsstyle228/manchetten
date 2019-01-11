@@ -1,9 +1,9 @@
-import {createStore} from "redux";
+import {createStore } from "redux";
 import combinedReducers from "./reducers/index";
+import { devToolsEnhancer  } from 'redux-devtools-extension';
 
 
-
-const store = createStore(combinedReducers);
+const store = createStore(combinedReducers, devToolsEnhancer());
 
 console.log(store.getState());
 store.subscribe(() => {

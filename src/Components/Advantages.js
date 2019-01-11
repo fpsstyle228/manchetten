@@ -2,16 +2,13 @@ import React, {Component} from 'react';
 
 
 class Advantages extends Component {
-  constructor() {
-    super();
-}
   render() {
     const AdventagesImages = this.props.data.images.map((img) => {
       return <div className="flexy">
         <span>
           { img.sub }
         </span>
-        <div className="img_cover"><img src={img.src}/></div>
+        <div className="img_cover"><img src={img.src} alt={ img.sub} /></div>
       </div>
     })
 

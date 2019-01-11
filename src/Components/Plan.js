@@ -14,7 +14,7 @@ class Plan extends Component {
     };
     const slides = this.props.data.images.map((img) => {
       return <div>
-        <div className="slidess"><img src={img}/></div>
+        <div className="slidess"><img src={img} alt='Slide-img' /></div>
       </div>
     })
     return (

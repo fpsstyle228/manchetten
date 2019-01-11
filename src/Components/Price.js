@@ -7,7 +7,7 @@ class Price extends Component {
     const houses = this.props.data.houses.map((house) => {
       return <div className="col-lg-4 col-md-6 text-center">
         <div className="service-box mt-5 mx-auto">
-          <img src= {house.img}/>
+          <img src= {house.img}  alt={house.bigText} />
           <h3 className="mb-3">{house.bigText}</h3>
           <p className="text-muted mb-0">{house.smallText}</p>
           <span className="pr_bl fr">Цена от
